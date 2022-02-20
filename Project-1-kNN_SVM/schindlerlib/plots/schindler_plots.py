@@ -98,11 +98,11 @@ def make_scree_plot(array):
   plt.plot(np.cumsum(array.explained_variance_ratio_ * 100))
   plt.xlabel("Number of components (Dimensions)")
   plt.ylabel("Explained variance (%)")
-  plt.xticks(np.arange(0, 105, step=5))
+  plt.xticks(np.arange(0, 400, step=10), rotation = 'vertical')
   plt.grid(visible = True)
 
   fig = plt.gcf()
-  fig.set_size_inches(18, 5)
+  fig.set_size_inches(25, 5)
 
   return plt.show()
 
